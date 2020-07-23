@@ -1,38 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto&display=swap');
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 .App {
   text-align: center;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: black;
+  height: 95vh;
+  background-image: url("./drumBackground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 3rem;
+  color: white;
+  text-shadow: 2px 2px 2px gray;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#drum-machine {
+  width: 350px;
+  height: 350px;
+  background-color: none;
+  margin: 2rem auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+}
+
+.drum-pad {
+  width: 115px;
+  height: 115px;
+  padding: 10px 10px;
+  border: 1px solid silver;
+  background-color: white;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  border-radius: 10px;
+  font-size: 2.5rem;
+  box-shadow: -2px -2px 1px black, 5px 5px 2px black;
+  font-family: 'Righteous', cursive;
+}
+
+.drum-pad:hover {
+  cursor: pointer;
+}
+
+.drum-pad:active {
+  box-shadow: unset;
+}
+
+
+.toggle {
+  isolation: isolate;
+  position: relative;
+  height: 30px;
+  width: 60px;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid gray;
+  background-color: gray;
+}
+
+.indicator {
+  height: 100%;
+  width: 200%;
+  background: #ecf0f3;
+  border-radius: 15px;
+  transform: translate3d(-75%, 0, 0);
+  transition: transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35);
+}
+
+.toggle:active ~ .indicator {
+  transform: translate3d(25%, 0, 0);
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
   color: white;
+  justify-content: center;
+  margin: 10px auto;
+  width: 260px;
 }
 
-.App-link {
-  color: #61dafb;
+.label-text {
+  margin-left: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.toggle {
+  isolation: isolate;
+  position: relative;
+  height: 30px;
+  width: 60px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-right: 10px;
 }
+
+.toggle-state {
+  display: none;
+}
+
+.indicator {
+  height: 100%;
+  width: 200%;
+  background: #ecf0f3;
+  border-radius: 15px;
+  transform: translate3d(-75%, 0, 0);
+  transition: transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35);
+}
+
+.toggle-state:checked ~ .indicator {
+  transform: translate3d(25%, 0, 0);
+}
+
+#display {
+  background: #0295E9;
+  width: 200px;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 600;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+}
+
+
+
+.other {
+  display: flex;
+  flex-direction: column;
+  margin: 25px 30px;
+}
+
