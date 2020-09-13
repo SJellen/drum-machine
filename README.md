@@ -1,4 +1,6 @@
 <h1 align="center">Welcome to Drum Machine 👋</h1>
+
+![screenshot](https://github.com/SJellen/drum-machine/blob/master/public/ScreenShot.png)
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://twitter.com/scottjellen" target="_blank">
